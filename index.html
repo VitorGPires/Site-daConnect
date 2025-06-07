@@ -43,7 +43,7 @@
 <header class="bg-card-bg shadow-md sticky top-0 z-50" x-data="{ isOpen: false }">
     <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
         <a href="index.html">
-            <img src="/img/Fundo.png" alt="Logo Conecttec" class="h-11 w-auto">
+            <img src="/img/Fundo.webp" alt="Logo Conecttec" class="h-16 w-auto">
         </a>
         <div class="hidden lg:flex items-center space-x-4">
             <div class="flex items-center space-x-2 font-semibold">
@@ -74,19 +74,19 @@
  <section class="text-center relative overflow-hidden flex items-center min-h-[75vh] lg:min-h-[65vh]" x-data="{ activeHeroSlide: 1, totalHeroSlides: 3 }" x-init="setInterval(() => { activeHeroSlide = activeHeroSlide === totalHeroSlides ? 1 : activeHeroSlide + 1 }, 6000)">
 
     <div class="absolute inset-0 z-[-1]">
-        <img src="/img/3slide.png" alt="Slide 1"
+        <img src="/img/3slide.webp" alt="Slide 1"
              class="absolute inset-0 w-full h-full object-cover" style="object-position: 80%;"
              x-show="activeHeroSlide === 1"
              x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
              x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
 
-        <img src="/img/2slide.png" alt="Slide 2"
+        <img src="/img/2slide.webp" alt="Slide 2"
              class="absolute inset-0 w-full h-full object-cover" style="object-position: 10.5%;"
              x-show="activeHeroSlide === 2"
              x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
              x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
 
-         <img src="/img/1slide.png" alt="Slide 3"
+         <img src="/img/1slide.webp" alt="Slide 3"
              class="absolute inset-0 w-full h-full object-cover object-center lg:object-right-bottom"  style="object-position: 56.40%;"
              x-show="activeHeroSlide === 3"
              x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
