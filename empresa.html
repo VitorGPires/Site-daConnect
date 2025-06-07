@@ -23,35 +23,35 @@
 </head>
 <body class="bg-background font-sans text-text-light">
 
-    <header class="bg-card-bg shadow-md sticky top-0 z-50" x-data="{ isOpen: false }">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html">
-                <img src="/img/Fundo.png" alt="Logo Conecttec" class="h-10 w-auto" loading="lazy">
+header class="bg-card-bg shadow-md sticky top-0 z-50" x-data="{ isOpen: false }">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="index.html">
+            <img src="/img/Fundo.png" alt="Logo Conecttec" class="h-11 w-auto" loading="lazy">
+        </a>
+        <div class="hidden lg:flex items-center space-x-4">
+            <div class="flex items-center space-x-2 font-semibold">
+                <a href="index.html" class="bg-primary text-white px-4 py-2 rounded-md">Início</a>
+                <a href="empresa.html" class="bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-primary px-4 py-2 rounded-md transition-colors">Empresa</a>
+                <a href="contato.html" class="bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-primary px-4 py-2 rounded-md transition-colors">Contato</a>
+            </div>
+            <a href="https://centralassinante.com.br/#/login" target="_blank" class="bg-primary text-white font-semibold px-4 py-2 rounded-md hover:bg-accent transition-colors">
+                Área do Cliente
             </a>
-            <div class="hidden lg:flex items-center space-x-4">
-                <div class="flex items-center space-x-2 font-semibold">
-                    <a href="index.html" class="bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-primary px-4 py-2 rounded-md transition-colors">Início</a>
-                    <a href="empresa.html" class="bg-primary text-white px-4 py-2 rounded-md">Empresa</a>
-                    <a href="contato.html" class="bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-primary px-4 py-2 rounded-md transition-colors">Contato</a>
-                </div>
-                <a href="https://centralassinante.com.br/#/login" target="_blank" class="bg-primary text-white font-semibold px-4 py-2 rounded-md hover:bg-accent transition-colors">
-                    Área do Cliente
-                </a>
-            </div>
-            <div class="lg:hidden">
-                <button @click="isOpen = !isOpen" class="text-text-dark focus:outline-none">
-                    <svg x-show="!isOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    <svg x-show="isOpen" x-cloak class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-        </nav>
-        <div x-show="isOpen" x-cloak @click.away="isOpen = false" class="lg:hidden bg-white shadow-md border-t border-gray-200" x-transition>
-            <a href="index.html" class="block py-3 px-6 text-text-dark hover:bg-gray-100">Início</a>
-            <a href="empresa.html" class="block py-3 px-6 text-primary font-semibold bg-gray-50">Empresa</a>
-            <a href="contato.html" class="block py-3 px-6 text-text-dark hover:bg-gray-100">Contato</a>
-            <a href="https://centralassinante.com.br/#/login" target="_blank" class="block py-3 px-6 text-white font-semibold border-t-2 border-gray-100 bg-primary hover:bg-accent">Área do Cliente</a>
         </div>
-    </header>
+        <div class="lg:hidden">
+            <button @click="isOpen = !isOpen" class="text-text-dark focus:outline-none">
+                <svg x-show="!isOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg x-show="isOpen" x-cloak class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak @click.away="isOpen = false" class="lg:hidden bg-white shadow-lg border-t border-gray-200 absolute w-full" x-transition>
+        <a href="index.html" class="block py-3 px-6 text-primary font-semibold bg-gray-50">Início</a>
+        <a href="empresa.html" class="block py-3 px-6 text-text-dark hover:bg-gray-100">Empresa</a>
+        <a href="contato.html" class="block py-3 px-6 text-text-dark hover:bg-gray-100">Contato</a>
+        <a href="https://centralassinante.com.br/#/login" target="_blank" class="block py-3 px-6 text-white font-semibold border-t-2 border-gray-100 bg-primary hover:bg-accent">Área do Cliente</a>
+    </div>
+</header>
 
     <main>
         <section class="py-16 md:py-20">
