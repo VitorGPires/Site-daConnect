@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Empresa - Conect Net</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: { 'background': '#ED842B', 'primary': '#FF5400', 'accent': '#EA580C', 'card-bg': '#FFFFFF', 'text-light': '#FFFFFF', 'text-dark': '#1F2937' }
+                }
+            }
+        }
+    </script>
+    <style>[x-cloak] { display: none !important; }</style>
+</head>
+<body class="bg-background font-sans text-text-light">
+
+    <header class="bg-card-bg shadow-md sticky top-0 z-50" x-data="{ isOpen: false }">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html">
+                <img src="/img/Fundo.png" alt="Logo Conecttec" class="h-10 w-auto" loading="lazy">
+            </a>
+            <div class="hidden lg:flex items-center space-x-4">
+                <div class="flex items-center space-x-2 font-semibold">
+                    <a href="index.html" class="bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-primary px-4 py-2 rounded-md transition-colors">Início</a>
+                    <a href="empresa.html" class="bg-primary text-white px-4 py-2 rounded-md">Empresa</a>
+                    <a href="contato.html" class="bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-primary px-4 py-2 rounded-md transition-colors">Contato</a>
+                </div>
+                <a href="https://centralassinante.com.br/#/login" target="_blank" class="bg-primary text-white font-semibold px-4 py-2 rounded-md hover:bg-accent transition-colors">
+                    Área do Cliente
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <button @click="isOpen = !isOpen" class="text-text-dark focus:outline-none">
+                    <svg x-show="!isOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg x-show="isOpen" x-cloak class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div x-show="isOpen" x-cloak @click.away="isOpen = false" class="lg:hidden bg-white shadow-md border-t border-gray-200" x-transition>
+            <a href="index.html" class="block py-3 px-6 text-text-dark hover:bg-gray-100">Início</a>
+            <a href="empresa.html" class="block py-3 px-6 text-primary font-semibold bg-gray-50">Empresa</a>
+            <a href="contato.html" class="block py-3 px-6 text-text-dark hover:bg-gray-100">Contato</a>
+            <a href="https://centralassinante.com.br/#/login" target="_blank" class="block py-3 px-6 text-white font-semibold border-t-2 border-gray-100 bg-primary hover:bg-accent">Área do Cliente</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16"><h1 class="text-5xl font-bold text-white">Nossa Empresa</h1></div>
+                <div class="relative max-w-2xl mx-auto">
+                    <div class="absolute left-8 top-0 h-full w-0.5 bg-orange-300/70"></div>
+                    <div class="relative pl-20 pb-16 group"><div class="absolute left-0 top-0 bg-primary text-text-light rounded-full h-16 w-16 flex items-center justify-center border-4 border-orange-400 transition-colors duration-300 group-hover:bg-orange-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div><div class="bg-card-bg text-text-dark rounded-lg p-6 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-hover:-translate-y-1"><h2 class="font-bold text-2xl text-primary mb-2">Quem Somos</h2><p class="text-text-dark/80">A Conect tec surgiu com intuito de fornecer um atendimento de qualidade para os nossos clientes, promovendo um serviço de banda larga através de Fibra Óptica com cobertura para as cidades do Distrito Federal. Sempre procurando satisfazer garantindo o suporte técnico rápido e eficiente.</p></div></div>
+                    <div class="relative pl-20 pb-16 group"><div class="absolute left-0 top-0 bg-primary text-text-light rounded-full h-16 w-16 flex items-center justify-center border-4 border-orange-400 transition-colors duration-300 group-hover:bg-orange-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><div class="bg-card-bg text-text-dark rounded-lg p-6 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-hover:-translate-y-1"><h2 class="font-bold text-2xl text-primary mb-2">Fibra Óptica</h2><p class="text-text-dark/80">Com a internet fibra óptica você tem uma navegação mais estável e não sofrerá interferência em seu sinal. Para sua residência temos excelentes velocidades que irão abranger suas necessidades. Escolha já seu plano!</p></div></div>
+                    <div class="relative pl-20 pb-16 group"><div class="absolute left-0 top-0 bg-primary text-text-light rounded-full h-16 w-16 flex items-center justify-center border-4 border-orange-400 transition-colors duration-300 group-hover:bg-orange-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 10-7.072 7.072m7.072-7.072l-2.122 2.122m-4.95-4.95l2.122-2.122m-2.122 9.192l-2.122 2.122M12 6.536V4m0 16v-2.536M4.464 12H2m20 0h-2.536M8.464 4.464L6.343 6.343m11.314 11.314l-2.121-2.121" /></svg></div><div class="bg-card-bg text-text-dark rounded-lg p-6 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-hover:-translate-y-1"><h2 class="font-bold text-2xl text-primary mb-2">Missão</h2><p class="text-text-dark/80">Atender aos nossos clientes com serviços de excelência, que contribuam para a o crescimento empresarial e/ou pessoal.</p></div></div>
+                    <div class="relative pl-20 pb-16 group"><div class="absolute left-0 top-0 bg-primary text-text-light rounded-full h-16 w-16 flex items-center justify-center border-4 border-orange-400 transition-colors duration-300 group-hover:bg-orange-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg></div><div class="bg-card-bg text-text-dark rounded-lg p-6 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-hover:-translate-y-1"><h2 class="font-bold text-2xl text-primary mb-2">Visão</h2><p class="text-text-dark/80">Ser empresa de referência, reconhecida como melhor opção por clientes, colaboradores e comunidade, tendo em vista a qualidade de nossos serviços.</p></div></div>
+                    <div class="relative pl-20 group"><div class="absolute left-0 top-0 bg-primary text-text-light rounded-full h-16 w-16 flex items-center justify-center border-4 border-orange-400 transition-colors duration-300 group-hover:bg-orange-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944A12.02 12.02 0 0012 22c4.646 0 8.56-2.784 10.236-6.66A12.02 12.02 0 0021 7.944a11.955 11.955 0 01-2.382-3.958z" /></svg></div><div class="bg-card-bg text-text-dark rounded-lg p-6 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-hover:-translate-y-1"><h2 class="font-bold text-2xl text-primary mb-2">Valores</h2><ul class="space-y-1 text-text-dark/80 list-disc list-inside"><li>Integridade</li><li>Honestidade</li><li>Comprometimento</li><li>Valorização Humana</li><li>Capacitação Contínua</li><li>Inovação</li><li>Ética</li></ul></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-8 text-center text-orange-100"><p class="text-sm">© 2025 Conecttec Internet. Todos os direitos reservados.</p><p class="text-xs text-orange-200 mt-1">Distrito Federal - Conectando você.</p></footer>
+</body>
+</html>
