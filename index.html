@@ -29,10 +29,6 @@
         }
     </script>
 
- 
-
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -71,40 +67,40 @@
 </header>
 
     <main>
- <section class="text-center relative overflow-hidden flex items-center min-h-[85vh] lg:min-h-[80vh]" x-data="{ activeHeroSlide: 1, totalHeroSlides: 3 }" x-init="setInterval(() => { activeHeroSlide = activeHeroSlide === totalHeroSlides ? 1 : activeHeroSlide + 1 }, 6000)">
+        <section class="text-center relative overflow-hidden flex items-center min-h-[70vh] md:min-h-[80vh]" x-data="{ activeHeroSlide: 1, totalHeroSlides: 3 }" x-init="setInterval(() => { activeHeroSlide = activeHeroSlide === totalHeroSlides ? 1 : activeHeroSlide + 1 }, 6000)">
 
-    <div class="absolute inset-0 z-[-1]">
-        <img src="/img/3slide.webp" alt="Slide 1"
-             class="absolute inset-0 w-full h-full object-cover" style="object-position: 80%;"
-             x-show="activeHeroSlide === 1"
-             x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-             x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+            <div class="absolute inset-0 z-[-1]">
+                <img src="/img/3slide.webp" alt="Slide 1"
+                     class="absolute inset-0 w-full h-full object-cover object-center"  style="object-position: 80.10%;"
+                     x-show="activeHeroSlide === 1" 
+                     x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                     x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
 
-        <img src="/img/2slide.webp" alt="Slide 2"
-             class="absolute inset-0 w-full h-full object-cover" style="object-position: 10.5%;"
-             x-show="activeHeroSlide === 2"
-             x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-             x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                <img src="/img/2slide.webp" alt="Slide 2"
+                     class="absolute inset-0 w-full h-full object-cover object-center"   style="object-position: 2.10%;"
+                     x-show="activeHeroSlide === 2"
+                     x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                     x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
 
-         <img src="/img/1slide.webp" alt="Slide 3"
-             class="absolute inset-0 w-full h-full object-cover object-center lg:object-right-bottom"  style="object-position: 56.40%;"
-             x-show="activeHeroSlide === 3"
-             x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-             x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                 <img src="/img/1slide.webp" alt="Slide 3"
+                     class="absolute inset-0 w-full h-full object-cover object-center"  style="object-position: 51.80%;" 
+                     x-show="activeHeroSlide === 3"
+                     x-transition:enter="transition-opacity ease-in-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                     x-transition:leave="transition-opacity ease-in-out duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
 
-        <div class="absolute inset-0 bg-black/50"></div>
-    </div>
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
 
-    <div x-show="activeHeroSlide === 1"
-         x-transition:enter="transition-opacity ease-out duration-1000" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-         x-transition:leave="transition-opacity ease-in duration-700" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
-         class="container mx-auto px-6 relative z-10">
+            <div x-show="activeHeroSlide === 1"
+                 x-transition:enter="transition-opacity ease-out duration-1000" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                 x-transition:leave="transition-opacity ease-in duration-700" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
+                 class="container mx-auto px-6 relative z-10">
 
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">Conectando Você ao Futuro Digital</h1>
-        <p class="text-lg md:text-xl text-orange-100 max-w-3xl mx-auto mb-8">Internet Fibra Óptica com ultravelocidade e estabilidade para o Distrito Federal.</p>
-        <a href="#planos" class="bg-primary text-white font-bold px-10 py-3 rounded-md text-lg hover:bg-orange-700 transition-colors">CONHEÇA NOSSOS PLANOS</a>
-    </div>
-</section>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">Conectando Você ao Futuro Digital</h1>
+                <p class="text-lg md:text-xl text-orange-100 max-w-3xl mx-auto mb-8">Internet Fibra Óptica com ultravelocidade e estabilidade para o Distrito Federal.</p>
+                <a href="#planos" class="bg-primary text-white font-bold px-10 py-3 rounded-md text-lg hover:bg-orange-700 transition-colors">CONHEÇA NOSSOS PLANOS</a>
+            </div>
+        </section>
 
         <section id="planos" class="py-20">
             <div class="container mx-auto">
